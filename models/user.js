@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
     static async getsports() {
       return this.findAll();
+    }
   }
   User.init({
     name: DataTypes.STRING,
