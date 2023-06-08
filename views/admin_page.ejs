@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http=-equi="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="./css/styles.css" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class = "grid grid-cols-6">
+            <div class="col-start-3 col-span-2">
+                <p> welcome <%= user.name %></p>
+
+                <%- include('header.ejs') %>
+                <a href="create_sport">Create New Sport</a>
+                <a href="create_session">Create New Session</a>
+                <div>
+                    <h2>Available Sports</h2>
+                    <%for(var i=0; i<sports.length; i++) { %>
+                        <li>
+                            <%= sports[i].sport %><br>
+                        </li>
+
+                    <% } %>
+                </div>
+                
+                
+                <div>
+                    <h2>Available Session</h2>
+                    <%for(var i=0; i<Session.length; i++) { %>
+                        <li>
+                            <%= Session[i] %><br>
+                        </li>
+
+                    <% } %>
+                </div>
+            </div>
+        </div>
+         
+        <br/>
+         
+        
+    </body>
+</html>
